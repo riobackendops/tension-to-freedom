@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>From Tension to Freedom · Free Masterclass with Dr. Yonatan Grinberg</title>
+<meta name="description" content="A free live masterclass with Dr. Yonatan Grinberg. Play the violin or viola with greater ease. Monday, October 12 at 8pm Eastern Time · Live on Zoom.">
+
+<!-- Social sharing preview. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="From Tension to Freedom · Free Live Masterclass">
+<meta property="og:description" content="Play the violin or viola with greater ease. A free live masterclass with Dr. Yonatan Grinberg on Monday, October 12 at 8pm Eastern Time.">
+<meta property="og:url" content="https://riobackendops.github.io/tension-to-freedom/">
+<meta property="og:image" content="https://riobackendops.github.io/tension-to-freedom/images/5-social-share-preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Analytics / ad pixel: paste your Google Analytics, Meta Pixel, etc. snippet here. -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Oranienbaum&family=Pinyon+Script&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --deep-navy: #14233D;
+    --navy: #1B3A63;
+    --midnight: #0F1D33;
+    --gold: #C9A227;
+    --gold-soft: #E3C06A;
+    --light-blue: #8CA3BC;
+    --pale-blue: #BCD0E6;
+    --mist: #EEF3F9;
+    --white: #FFFFFF;
+    --ink: #14233D;
+    --sans: "Work Sans", system-ui, sans-serif;
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --display: "Oranienbaum", "Cormorant Garamond", Georgia, serif;
+    --script: "Pinyon Script", cursive;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--white);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+  .narrow { max-width: 720px; margin: 0 auto; padding: 0 16px; }
+  section { padding: 72px 0; }
+
+  /* Unfilled placeholders are highlighted so they can't slip through to launch. */
+  .ph { background: #fff3c4; color: #6b4e00; outline: 1px dashed #c9a227; padding: 0 4px; border-radius: 2px; }
+
+  .eyebrow {
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .h2 {
+    margin: 0 0 20px;
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(32px, 4.4vw, 44px);
+    line-height: 1.15;
+    color: var(--navy);
+  }
+  .center { text-align: center; }
+
+  .btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--deep-navy);
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border: 0;
+    border-radius: 3px;
+    padding: 16px 32px;
+    cursor: pointer;
+    line-height: 1.4;
+    transition: background .2s, transform .2s;
+  }
+  .btn:hover { background: var(--gold-soft); transform: translateY(-1px); }
+  .btn:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
+  .btn-outline { background: transparent; color: var(--navy); box-shadow: inset 0 0 0 1.5px var(--navy); }
+  .btn-outline:hover { background: rgba(27,58,99,.08); }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    background: var(--midnight);
+    color: var(--white);
+    text-align: center;
+    padding: 0 16px 200px;
+    overflow: hidden;
+  }
+  .hero-photo {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: min(78vw, 760px);
+    background:
+      linear-gradient(90deg, rgba(15,29,51,.35) 0%, rgba(15,29,51,0) 30%, rgba(15,29,51,0) 60%, rgba(15,29,51,.7) 100%),
+      linear-gradient(180deg, rgba(15,29,51,.15) 0%, rgba(15,29,51,.35) 60%, rgba(15,29,51,.6) 100%),
+      url("images/1-hero-banner.jpg") 50% 0 / cover no-repeat;
+    -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+            mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+  }
+  .hero-title-wrap { position: relative; padding-top: min(44vw, 420px); }
+  .live-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(180deg, #d9b447, #b88f1c);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: .14em;
+    padding: 5px 16px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  .live-pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #e8352b; }
+  .hero h1 {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: .92;
+    letter-spacing: -.01em;
+    font-size: clamp(34px, 11.5vw, 104px);
+    white-space: nowrap;
+    text-shadow: 0 4px 24px rgba(0,0,0,.35);
+  }
+  .hero h1 .line { display: block; }
+  .hero h1 .line-2 { padding-left: .9em; }
+  .hero h1 .to { font-size: .62em; vertical-align: .55em; margin-right: .1em; }
+  .hero h1 .f {
+    font-family: var(--script);
+    text-transform: none;
+    color: var(--gold);
+    font-size: 1.3em;
+    line-height: 0;
+    margin-right: .2em;
+    position: relative;
+    top: .08em;
+  }
+  .tagline {
+    margin: 22px 0 0;
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(24px, 3.6vw, 34px);
+    line-height: 1.25;
+    color: var(--white);
+    text-shadow: 0 0 18px rgba(140,190,255,.35);
+  }
+  .hero-meta {
+    margin: 18px 0 0;
+    font-size: 15px;
+    letter-spacing: .06em;
+    color: #d7e1ee;
+  }
+  .hero-meta .dot { color: var(--gold); padding: 0 8px; }
+
+  /* ---------- REGISTER CARD ---------- */
+  .register { position: relative; padding: 0 16px 24px; }
+  .card {
+    position: relative;
+    max-width: 720px;
+    margin: -160px auto 0;
+    background: var(--pale-blue);
+    border-radius: 32px;
+    padding: 40px clamp(20px, 5vw, 56px) 36px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(15,29,51,.18);
+  }
+  .card .lead {
+    margin: 0 0 10px;
+    font-weight: 600;
+    font-size: clamp(16px, 2.4vw, 19px);
+    line-height: 1.45;
+    color: var(--deep-navy);
+  }
+  .card .when {
+    margin: 0 0 24px;
+    font-size: 15px;
+    color: var(--navy);
+  }
+  .field { margin: 0 auto 20px; max-width: 560px; }
+  .field label {
+    display: block;
+    font-size: 15px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--deep-navy);
+  }
+  .field input {
+    width: 100%;
+    font: inherit;
+    font-size: 17px;
+    padding: 12px 14px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background: var(--white);
+    color: var(--ink);
+  }
+  .field input:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 3px rgba(27,58,99,.2); }
+  .privacy { margin: -8px 0 0; font-size: 13px; color: #3c5577; }
+  .card form .btn { margin-top: 20px; }
+  .card .note {
+    margin: 20px 0 0;
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: .02em;
+    color: var(--navy);
+  }
+  .thanks { display: none; padding: 8px 0; }
+  .thanks h2 { font-family: var(--serif); font-weight: 500; font-size: 44px; margin: 0 0 8px; color: var(--navy); line-height: 1.1; }
+  .thanks p { margin: 0 auto 14px; max-width: 540px; }
+  .thanks .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 20px 0; }
+  .thanks .tip { font-style: italic; color: var(--navy); }
+  .card.done form { display: none; }
+  .card.done .thanks { display: block; }
+
+  /* ---------- PROBLEM ---------- */
+  .problem { padding-top: 64px; }
+  .problem p { margin: 0 0 18px; font-size: 18px; }
+  .problem .pull {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 26px;
+    line-height: 1.35;
+    color: var(--navy);
+    border-left: 2px solid var(--gold);
+    padding-left: 20px;
+    margin: 28px 0;
+  }
+
+  /* ---------- INVITATION ---------- */
+  .invite {
+    background: radial-gradient(ellipse 80% 70% at 50% 40%, var(--navy) 0%, var(--midnight) 100%);
+    color: var(--white);
+    padding: 64px 16px;
+  }
+  .invite-box {
+    max-width: 1060px;
+    margin: 0 auto;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 6px;
+    padding: clamp(24px, 4vw, 44px);
+    display: grid;
+    grid-template-columns: 1.45fr 1fr;
+    gap: clamp(24px, 4vw, 48px);
+    align-items: start;
+  }
+  .invite h2 {
+    margin: 0 0 16px;
+    text-align: center;
+    font-family: var(--script);
+    font-weight: 400;
+    font-size: clamp(44px, 6vw, 60px);
+    line-height: 1.1;
+    color: var(--white);
+    text-shadow: 0 0 14px rgba(140,190,255,.4);
+  }
+  .invite p { margin: 0 0 16px; line-height: 1.65; color: #e8eef6; }
+  .invite .program { color: var(--gold-soft); font-weight: 600; }
+  .invite .sign { margin-top: 24px; }
+  .invite .signature {
+    display: block;
+    font-family: var(--script);
+    font-size: 40px;
+    line-height: 1.2;
+    color: var(--gold-soft);
+    margin-top: 4px;
+  }
+  .invite-side { display: flex; flex-direction: column; gap: 20px; }
+  .invite-side img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border-radius: 6px;
+  }
+  .invite-side .btn { width: 100%; padding: 18px 16px; }
+
+  /* ---------- REFRAME ---------- */
+  .reframe .wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(28px, 5vw, 56px);
+    align-items: center;
+  }
+  .browser {
+    background: var(--midnight);
+    border-radius: 4px;
+    padding: 0 14px 14px;
+    box-shadow: 0 12px 30px rgba(15,29,51,.2);
+  }
+  .browser-bar { display: flex; gap: 5px; padding: 8px 2px; }
+  .browser-bar span { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.7); }
+  .browser img { width: 100%; aspect-ratio: 16 / 11; object-fit: cover; object-position: 50% 30%; }
+  .reframe p { margin: 0 0 16px; }
+
+  /* ---------- LEARN ---------- */
+  .learn { background: var(--mist); }
+  .learn-grid {
+    list-style: none;
+    margin: 36px 0 40px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    counter-reset: learn;
+  }
+  .learn-grid li {
+    position: relative;
+    counter-increment: learn;
+    background: var(--white);
+    border-top: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 24px 22px 26px;
+    box-shadow: 0 6px 20px rgba(15,29,51,.06);
+    line-height: 1.5;
+  }
+  .learn-grid li::before {
+    content: counter(learn, decimal-leading-zero);
+    display: block;
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  /* ---------- HOW + WHO ---------- */
+  .how-who .panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(20px, 3vw, 32px);
+    align-items: stretch;
+  }
+  .panel { position: relative; padding: clamp(28px, 4vw, 44px); border-radius: 4px; }
+  .panel h3 {
+    margin: 0 0 18px;
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.2;
+  }
+  .panel p { margin: 0 0 16px; }
+  .panel ul { margin: 0; padding-left: 20px; }
+  .panel li { margin-bottom: 12px; line-height: 1.55; }
+  .panel-navy { background: var(--navy); color: #e8eef6; }
+  .panel-navy h3 { color: var(--white); }
+  .panel-navy .eyebrow { color: var(--gold-soft); }
+  .panel-blue { background: var(--pale-blue); color: var(--deep-navy); }
+  .panel-blue h3 { color: var(--navy); }
+  .panel-blue .eyebrow { color: var(--navy); }
+  .panel-blue li::marker { color: var(--navy); }
+  .curious { margin-top: 48px; text-align: center; }
+  .curious .big {
+    margin: 0;
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(30px, 4vw, 40px);
+    line-height: 1.2;
+    color: var(--gold);
+  }
+  .curious p:last-child { margin: 6px 0 0; font-weight: 600; font-size: 19px; color: var(--navy); }
+
+  /* ---------- KEY LINE ---------- */
+  .keyline {
+    background: var(--midnight);
+    color: var(--white);
+    text-align: center;
+    padding: 80px 16px;
+    position: relative;
+  }
+  .keyline::before, .keyline::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 auto;
+  }
+  .keyline blockquote {
+    margin: 28px auto;
+    max-width: 820px;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(26px, 3.8vw, 40px);
+    line-height: 1.3;
+  }
+  .keyline blockquote span { color: var(--gold-soft); display: block; }
+
+  /* ---------- ABOUT ---------- */
+  .about .wrap {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: clamp(28px, 5vw, 64px);
+    align-items: center;
+  }
+  .about img {
+    width: 100%;
+    aspect-ratio: 859 / 1019;
+    object-fit: cover;
+    object-position: 50% 20%;
+    border-radius: 4px;
+  }
+  .about .creds { margin: -8px 0 20px; font-size: 14px; letter-spacing: .12em; text-transform: uppercase; color: var(--light-blue); font-weight: 500; }
+  .about p { margin: 0 0 16px; }
+  .about .quote {
+    margin: 28px 0 0;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--navy);
+    border-left: 2px solid var(--gold);
+    padding-left: 20px;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq { background: var(--mist); }
+  .faq details {
+    background: var(--white);
+    border-radius: 4px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 10px rgba(15,29,51,.05);
+  }
+  .faq summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 20px 56px 20px 24px;
+    font-weight: 600;
+    color: var(--navy);
+    position: relative;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: "+";
+    position: absolute;
+    right: 24px; top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--gold);
+  }
+  .faq details[open] summary::after { content: "–"; }
+  .faq summary:focus-visible { outline: 2px solid var(--navy); outline-offset: -2px; }
+  .faq details p { margin: 0; padding: 0 24px 22px; }
+
+  /* ---------- FINAL CTA ---------- */
+  .final {
+    background: radial-gradient(ellipse 80% 90% at 50% 30%, var(--navy) 0%, var(--midnight) 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 80px 16px;
+  }
+  .final h2 {
+    margin: 0 auto 12px;
+    max-width: 720px;
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(30px, 4.2vw, 42px);
+    line-height: 1.2;
+  }
+  .final p { margin: 0 0 28px; color: #c9d6e6; }
+  footer {
+    background: var(--midnight);
+    border-top: 1px solid rgba(255,255,255,.1);
+    color: var(--light-blue);
+    text-align: center;
+    font-size: 14px;
+    padding: 24px 16px 32px;
+  }
+  footer .name { font-family: var(--serif); font-size: 22px; color: var(--gold-soft); display: block; }
+  .about .find { margin: 32px 0 12px; font-weight: 600; color: var(--navy); }
+  .social { list-style: none; margin: 0; padding: 0; display: flex; gap: 12px; }
+  .social a {
+    display: grid; place-items: center;
+    width: 42px; height: 42px; border-radius: 50%;
+    transition: background .2s, color .2s;
+  }
+  .social svg { width: 20px; height: 20px; }
+  .social-about a { color: var(--navy); box-shadow: inset 0 0 0 1.5px var(--navy); }
+  .social-about a:hover { background: var(--navy); color: var(--white); }
+  .social-footer { justify-content: center; margin-top: 16px; }
+  .social-footer a { color: var(--gold-soft); box-shadow: inset 0 0 0 1px rgba(227,192,106,.5); }
+  .social-footer a:hover { background: var(--gold); color: var(--midnight); }
+  .social a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+
+  /* ---------- MOTION & HOVER ---------- */
+  :root { --ease: cubic-bezier(.22,.61,.36,1); }
+  .frame { overflow: hidden; border-radius: 6px; }
+  .browser .frame { border-radius: 0; }
+  .frame img { transition: transform .8s var(--ease), filter .6s var(--ease); }
+
+  .learn-grid li,
+  .panel,
+  .faq details,
+  .invite-box,
+  .browser,
+  .field input,
+  .panel li,
+  .problem .pull,
+  .about .quote {
+    transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease),
+                background-color .35s var(--ease), color .35s var(--ease), padding .35s var(--ease), opacity .35s var(--ease);
+  }
+  .faq summary { transition: color .25s var(--ease), background-color .25s var(--ease); }
+  .faq summary::after { transition: transform .35s var(--ease); }
+  .faq details[open] summary::after { transform: translateY(-50%) rotate(180deg); }
+
+  /* Highlights: mouse hover, plus keyboard focus for accessibility. */
+  @media (hover: hover) {
+    .frame:hover img { transform: scale(1.05); filter: brightness(1.05); }
+    .browser:hover { transform: translateY(-4px); box-shadow: 0 22px 44px rgba(15,29,51,.28); }
+
+    /* What you'll discover: the hovered card turns navy and lifts; the others step back. */
+    .learn-grid li::before { transition: color .35s var(--ease); }
+    .learn-grid:hover li { opacity: .6; }
+    .learn-grid li:hover {
+      opacity: 1;
+      transform: translateY(-8px) scale(1.04);
+      background: var(--navy);
+      color: var(--white);
+      border-top-color: var(--gold);
+      box-shadow: 0 24px 48px rgba(15,29,51,.28);
+      z-index: 1;
+    }
+    .learn-grid li:hover::before { color: var(--gold-soft); }
+
+    /* How it works / Who it's for: the hovered panel grows with a gold ring; the other steps back. */
+    .panels:hover .panel { opacity: .65; transform: scale(.98); }
+    .panels .panel:hover {
+      opacity: 1;
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 0 0 3px var(--gold), 0 28px 56px rgba(15,29,51,.3);
+      z-index: 1;
+    }
+    .panel-blue:hover { background: #cddcee; }
+    .panel-navy:hover { background: #1f4372; }
+    .panel h3 { transition: color .35s var(--ease); }
+    .panel-blue:hover h3 { color: var(--midnight); }
+    .panel li { border-radius: 3px; }
+    .panel-navy li:hover { color: var(--gold-soft); }
+    .panel-blue li:hover { color: var(--midnight); font-weight: 500; }
+    .panel li:hover { transform: translateX(6px); }
+
+    .invite-box:hover { border-color: rgba(227,192,106,.8); box-shadow: 0 0 0 1px rgba(227,192,106,.25), 0 24px 60px rgba(0,0,0,.25); }
+
+    .faq details:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(15,29,51,.1); }
+    .faq summary:hover { color: var(--gold); }
+
+    .field input:hover { border-color: rgba(27,58,99,.45); }
+
+    .problem .pull:hover, .about .quote:hover { border-left-color: var(--navy); padding-left: 26px; }
+
+    .card { transition: box-shadow .4s var(--ease); }
+    .card:hover { box-shadow: 0 26px 60px rgba(15,29,51,.26); }
+  }
+  .learn-grid li:focus-within, .faq details:focus-within { box-shadow: 0 0 0 2px var(--gold); }
+  .btn:active { transform: translateY(1px); }
+
+  /* Scroll reveal: only applied when JavaScript is running, so content is never hidden without it. */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .9s var(--ease), transform .9s var(--ease);
+    transition-delay: var(--delay, 0s);
+  }
+  .js .reveal.in { opacity: 1; transform: none; }
+  .js .hero-title-wrap > * { animation: rise 1s var(--ease) both; }
+  .js .hero-title-wrap > :nth-child(2) { animation-delay: .12s; }
+  .js .hero-title-wrap > :nth-child(3) { animation-delay: .28s; }
+  .js .hero-title-wrap > :nth-child(4) { animation-delay: .4s; }
+  .js .hero-photo { animation: fadeZoom 1.6s var(--ease) both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+  @keyframes fadeZoom { from { opacity: 0; transform: scale(1.04); } to { opacity: 1; transform: none; } }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 900px) {
+    .learn-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 820px) {
+    section { padding: 56px 0; }
+    .invite-box, .reframe .wrap, .how-who .panels, .about .wrap { grid-template-columns: 1fr; }
+    .invite-side img { aspect-ratio: 4 / 3; }
+    .about img { aspect-ratio: 4 / 3; }
+  }
+  @media (max-width: 520px) {
+    body { font-size: 16px; }
+    .hero { padding-bottom: 180px; }
+    .hero-photo { height: 110vw; background-position: 0 0, 0 0, 52% 0; }
+    .hero-title-wrap { padding-top: 62vw; }
+    .hero-meta .dot { padding: 0 4px; }
+    .card { border-radius: 22px; margin-top: -150px; }
+    .card form .btn { width: 100%; }
+    .learn-grid { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+    .js .reveal { opacity: 1; transform: none; }
+    .frame:hover img { transform: none; }
+  }
+</style>
+<script>
+  // Turn on entrance animations only when motion is welcome and supported.
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('js');
+  }
+</script>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-photo" role="img" aria-label="Dr. Yonatan Grinberg performing on the violin with an orchestra"></div>
+  <div class="hero-title-wrap">
+    <span class="live-pill">FREE LIVE MASTERCLASS</span>
+    <h1 aria-label="From Tension to Freedom">
+      <span class="line" aria-hidden="true"><span class="f">F</span>rom Tension</span>
+      <span class="line line-2" aria-hidden="true"><span class="to">To</span> <span class="f">F</span>reedom</span>
+    </h1>
+    <p class="tagline">Play the violin or viola with greater ease</p>
+    <p class="hero-meta">Monday, October 12<span class="dot">·</span><span data-event="time"></span><span class="dot">·</span>Live on Zoom<span class="dot">·</span>Free</p>
+  </div>
+</header>
+
+<section class="register" id="register">
+  <div class="card" id="card">
+    <form id="signup-form" novalidate>
+      <p class="lead">Learn to control tension instead of being controlled by it.<br>
+        Join Dr. Yonatan Grinberg live on Monday, October 12.</p>
+      <p class="when"><span data-event="time"></span> · Live on <span data-event="platform"></span></p>
+      <div class="field">
+        <label for="first-name">First Name</label>
+        <input id="first-name" name="first_name" type="text" autocomplete="given-name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <p class="privacy">We'll only use your email to send your Zoom details, reminders, and the replay.</p>
+      <button class="btn" type="submit">Reserve My Free Place</button>
+      <p class="note">Bring your instrument. You'll try guided exercises as we go.</p>
+    </form>
+    <div class="thanks" role="status" aria-live="polite">
+      <h2>You're in.</h2>
+      <p>Your place is reserved for Monday, October 12 at <span data-event="time"></span>.</p>
+      <div class="actions">
+        <button class="btn" type="button" id="add-calendar">Add to My Calendar</button>
+        <button class="btn btn-outline" type="button" id="share-page">Share with a Friend</button>
+      </div>
+      <p>A confirmation is on its way to your inbox, and your Zoom details will follow in your calendar invite closer to the date. If you don't see the confirmation within a few minutes, check your spam or promotions folder. Can't make it live? A replay will be sent within 24–48 hours.</p>
+      <p class="tip">Until then, try this: play a slow open string and simply notice what's working that doesn't need to be. We'll build on that together.</p>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="narrow">
+    <span class="eyebrow">Sound familiar?</span>
+    <h2 class="h2">You've been told to "just relax." It hasn't worked.</h2>
+    <p>Maybe your bow hold tightens when a passage speeds up. Maybe your fingers feel stiff, your shoulders creep upward, or your jaw holds on without you noticing. Maybe practice leaves you more tired than it should.</p>
+    <p>And somewhere along the way, someone told you to relax.</p>
+    <p class="pull">But nobody explained what that means while you're holding a bow, stopping a string, and trying to make music at the same time.</p>
+    <p>What should stay active? What should let go? And how do you tell the difference?</p>
+  </div>
+</section>
+
+<section class="invite">
+  <div class="invite-box">
+    <div>
+      <h2>You're Invited!</h2>
+      <p>I'd like to personally invite you to a free live masterclass I'm teaching on Monday, October 12 at <span data-event="time"></span>.</p>
+      <p class="program">From Tension to Freedom: Play the Violin or Viola with Greater Ease</p>
+      <p>If you've ever dealt with a tight bow hold, stiff fingers, raised shoulders, or fatigue while playing, you've probably been told to "just relax." It's well-meant advice, but it leaves out the most important part: what should stay active while everything else lets go.</p>
+      <p>That's what we'll explore together, with practical exercises for the bow hold, the fingers, and martelé. So bring your instrument.</p>
+      <p>It's free, it's live, and I'd love to see you there.</p>
+      <p class="sign">Warmly,<span class="signature">Yonatan Grinberg</span></p>
+    </div>
+    <div class="invite-side">
+      <div class="frame"><img src="images/2-youre-invited.jpg" alt="Dr. Yonatan Grinberg holding his violin outdoors" loading="lazy"></div>
+      <a class="btn" href="#register">Reserve My Free Place</a>
+    </div>
+  </div>
+</section>
+
+<section class="reframe">
+  <div class="wrap">
+    <div class="browser">
+      <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="frame"><img src="images/3-ease-reframe.jpg" alt="Dr. Yonatan Grinberg playing the violin" loading="lazy"></div>
+    </div>
+    <div>
+      <span class="eyebrow">The reframe</span>
+      <h2 class="h2">Ease isn't the absence of effort.</h2>
+      <p>Playing the violin or viola requires real physical effort. The question is how much, and when.</p>
+      <p>Ease means using the right amount of effort at the right moment, and releasing it when it's no longer needed. Relaxation isn't the goal in itself. It's a tool that lets you move freely, respond to the instrument, and play what you actually hear.</p>
+    </div>
+  </div>
+</section>
+
+<section class="learn">
+  <div class="wrap center">
+    <span class="eyebrow">What you'll learn</span>
+    <h2 class="h2">In this masterclass, you'll discover:</h2>
+    <ul class="learn-grid" style="text-align:left">
+      <li>The difference between necessary muscular activity and unnecessary tension</li>
+      <li>Why trying to stay completely relaxed can undermine your control</li>
+      <li>How to find the minimum effort a technical task requires</li>
+      <li>How strength, coordination, and flexibility make playing feel easier</li>
+      <li>Why rigidity can feel secure while actually limiting control</li>
+      <li>How to engage and release muscles intentionally</li>
+    </ul>
+    <a class="btn" href="#register">Reserve My Free Place</a>
+  </div>
+</section>
+
+<section class="how-who">
+  <div class="wrap panels">
+    <div class="panel panel-navy">
+      <span class="eyebrow">How it works</span>
+      <h3>Practical, not theoretical.</h3>
+      <p>This isn't a lecture. You'll work through guided exercises with the bow hold, the fingers, and simple strokes like martelé, all designed so you can try them on your own instrument in real time.</p>
+      <p>You'll leave with a clearer sense of what your playing actually requires, and a practical way to keep exploring it in your own practice.</p>
+    </div>
+    <div class="panel panel-blue">
+      <span class="eyebrow">Who it's for</span>
+      <h3>This masterclass is for you if…</h3>
+      <ul>
+        <li>You're an adult violinist or violist who takes your playing seriously</li>
+        <li>You're returning to the instrument and finding it more physically demanding than you remember</li>
+        <li>You notice tension, stiffness, or fatigue while you play</li>
+        <li>You're ready for something more useful than "just relax"</li>
+      </ul>
+    </div>
+  </div>
+  <div class="curious wrap">
+    <p class="big">You don't need to be advanced.</p>
+    <p>You just need to be curious about how you play.</p>
+  </div>
+</section>
+
+<section class="keyline" aria-label="Key idea">
+  <blockquote>Playing with ease doesn't mean playing without strength. <span>It means strength you can use and release at will.</span></blockquote>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div class="frame"><img src="images/4-meet-yonatan.jpg" alt="Dr. Yonatan Grinberg smiling and holding his violin" loading="lazy"></div>
+    <div>
+      <span class="eyebrow">About the instructor</span>
+      <h2 class="h2">Meet Dr. Yonatan Grinberg</h2>
+      <p class="creds">DMA, Peabody Conservatory · Baltimore</p>
+      <p>Dr. Yonatan Grinberg is a violinist, chamber musician, and educator based in Baltimore.</p>
+      <p>He holds a Doctor of Musical Arts degree from the Peabody Conservatory and has performed internationally as a soloist and chamber musician.</p>
+      <p>He has studied with some of the greatest violin masters in the world, including Vadim Gluzman, Itzhak Perlman, and Shmuel Ashkenazi.</p>
+      <p>Through his teaching and coaching programs, he helps musicians develop greater technical freedom, expressive playing, and confidence in performance.</p>
+      <p class="quote">"I believe players deserve more than 'relax.' They deserve a clear way to discover how much effort their playing needs, and how to use it on purpose."</p>
+      <p class="find">Find Dr. Yonatan here:</p>
+      <ul class="social social-about">
+        <li><a href="https://www.instagram.com/yonatangrinbergviolin/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a></li>
+        <li><a href="https://www.facebook.com/YonatanGrinbergViolin" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.3H8.1v3h2.5V21h2.9z"/></svg></a></li>
+        <li><a href="https://www.youtube.com/@yonatangrinbergviolin" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="narrow">
+    <div class="center">
+      <span class="eyebrow">Questions</span>
+      <h2 class="h2">Frequently asked questions</h2>
+    </div>
+    <details>
+      <summary>Is the masterclass really free?</summary>
+      <p>Yes, completely free.</p>
+    </details>
+    <details>
+      <summary>Do I need to be an advanced player?</summary>
+      <p>No. The exercises work at any level, as long as you're comfortable holding the instrument and bow.</p>
+    </details>
+    <details>
+      <summary>Is this for violists too?</summary>
+      <p>Absolutely. Everything applies to both the violin and the viola.</p>
+    </details>
+    <details>
+      <summary>Should I bring my instrument?</summary>
+      <p>Yes. Have it tuned and nearby, because you'll try the exercises as we go.</p>
+    </details>
+    <details>
+      <summary>Where does it take place?</summary>
+      <p>Live on <span data-event="platform"></span>. Your Zoom details will be included in your calendar invite closer to the date.</p>
+    </details>
+    <details>
+      <summary>Will there be a replay?</summary>
+      <p><span data-event="replay"></span></p>
+    </details>
+    <details>
+      <summary>I experience pain when I play. Will this help?</summary>
+      <p>This masterclass focuses on how you use effort while playing. It isn't medical advice or treatment, so if you're experiencing pain, please consult a qualified health professional.</p>
+    </details>
+  </div>
+</section>
+
+<section class="final">
+  <h2>Learn to control tension instead of being controlled by it.</h2>
+  <p>Join Dr. Yonatan Grinberg live on Monday, October 12 at <span data-event="time"></span>.</p>
+  <a class="btn" href="#register">Reserve My Free Place</a>
+</section>
+
+<footer>
+  <span class="name">Dr. Yonatan Grinberg</span>
+  Violinist, Chamber Musician &amp; Educator · DMA, Peabody Conservatory
+  <ul class="social social-footer">
+        <li><a href="https://www.instagram.com/yonatangrinbergviolin/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a></li>
+        <li><a href="https://www.facebook.com/YonatanGrinbergViolin" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.3H8.1v3h2.5V21h2.9z"/></svg></a></li>
+        <li><a href="https://www.youtube.com/@yonatangrinbergviolin" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a></li>
+      </ul>
+</footer>
+
+<script>
+  // ==== EVENT DETAILS: fill these in once and they update everywhere on the page. ====
+  var EVENT = {
+    time: "8pm Eastern Time",
+    platform: "Zoom",
+    replay: "Yes. A replay will be sent to everyone who registers within 24–48 hours after the live session.",
+    // For the calendar file, in UTC (8pm ET on Oct 12 = midnight UTC Oct 13).
+    // Calendars need an end time, so this blocks out one hour.
+    // Leave empty to add an all-day event on October 12.
+    startUTC: "20261013T000000Z",
+    endUTC: "20261013T010000Z"
+  };
+
+  document.querySelectorAll('[data-event]').forEach(function (el) {
+    var value = EVENT[el.getAttribute('data-event')] || '';
+    el.textContent = value;
+    if (value.charAt(0) === '[') el.classList.add('ph');
+  });
+
+  // Send sign-ups to the MailerLite form "From Tension to Freedom - Free Masterclass", then show the thank-you message.
+  var MAILERLITE_ACTION = "https://assets.mailerlite.com/jsonp/1497377/forms/200054326493709443/subscribe";
+  document.getElementById('signup-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var form = e.target;
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Reserving…';
+    var data = new FormData();
+    data.append('fields[name]', form.first_name.value.trim());
+    data.append('fields[email]', form.email.value.trim());
+    data.append('ml-submit', '1');
+    data.append('anticsrf', 'true');
+    fetch(MAILERLITE_ACTION, { method: 'POST', body: data, mode: 'no-cors' })
+      .then(function () {
+        document.getElementById('card').classList.add('done');
+        document.getElementById('register').scrollIntoView({ block: 'start' });
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = 'Reserve My Free Place';
+        alert('Something went wrong. Please check your connection and try again.');
+      });
+  });
+
+  document.getElementById('add-calendar').addEventListener('click', function () {
+    var timed = EVENT.startUTC && EVENT.endUTC;
+    var ics = [
+      'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Yonatan Grinberg//Masterclass//EN',
+      'BEGIN:VEVENT',
+      'UID:tension-to-freedom-20261012@yonatangrinberg',
+      'DTSTAMP:' + new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z',
+      timed ? 'DTSTART:' + EVENT.startUTC : 'DTSTART;VALUE=DATE:20261012',
+      timed ? 'DTEND:' + EVENT.endUTC : 'DTEND;VALUE=DATE:20261013',
+      'SUMMARY:From Tension to Freedom · Free Masterclass with Dr. Yonatan Grinberg',
+      'DESCRIPTION:Live on Zoom. Your Zoom details will be sent closer to the date. Bring your instrument\\, tuned and nearby.',
+      'END:VEVENT', 'END:VCALENDAR'
+    ].join('\r\n');
+    var link = document.createElement('a');
+    link.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
+    link.download = 'tension-to-freedom-masterclass.ics';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  });
+
+  document.getElementById('share-page').addEventListener('click', function () {
+    var btn = this;
+    var data = { title: 'From Tension to Freedom · Free Masterclass', url: location.href.split('#')[0] };
+    if (navigator.share) { navigator.share(data).catch(function () {}); return; }
+    navigator.clipboard.writeText(data.url).then(function () {
+      btn.textContent = 'Link Copied';
+      setTimeout(function () { btn.textContent = 'Share with a Friend'; }, 2000);
+    });
+  });
+  // Scroll reveal: fade sections in as they enter the viewport.
+  (function () {
+    if (!document.documentElement.classList.contains('js')) return;
+    var groups = [
+      '.problem .narrow > *', '.invite-box > *', '.reframe .wrap > *',
+      '.learn .eyebrow', '.learn .h2', '.learn-grid li', '.learn .btn',
+      '.how-who .panel', '.curious', '.keyline blockquote',
+      '.about .wrap > *', '.faq .center', '.faq details', '.final > *'
+    ];
+    groups.forEach(function (sel) {
+      document.querySelectorAll(sel).forEach(function (el, i) {
+        el.classList.add('reveal');
+        el.style.setProperty('--delay', Math.min(i, 5) * 0.08 + 's');
+      });
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target;
+        el.classList.add('in');
+        io.unobserve(el);
+        // Once revealed, hand the element back to its normal hover transitions.
+        setTimeout(function () {
+          el.classList.remove('reveal', 'in');
+          el.style.removeProperty('--delay');
+        }, 1400);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  })();
+</script>
+</body>
+</html>
