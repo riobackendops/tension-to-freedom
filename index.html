@@ -14,7 +14,15 @@
 <meta property="og:image" content="https://fromtensiontofreedom.linkrepo.co/images/5-social-share-preview.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
-<!-- Analytics / ad pixel: paste your Google Analytics, Meta Pixel, etc. snippet here. -->
+<!-- ============================================================
+     ANALYTICS SLOT - paste your provider's snippet directly below.
+     The page already fires named events through track() in the
+     script at the bottom; it forwards to whichever provider loads:
+       gtag()      - Google Analytics 4
+       plausible() - Plausible
+       dataLayer   - Google Tag Manager
+     No names or email addresses are ever sent - counts only.
+     ============================================================ -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -746,6 +754,21 @@ html{scroll-behavior:smooth}
 
 <script>
 (function(){
+
+  // ---- analytics ------------------------------------------------
+  // Inert until a provider snippet is present in the head slot.
+  // Deliberately sends no personal data: event names and counts only.
+  function track(event, props){
+    props = props || {};
+    try {
+      if (typeof window.gtag === 'function')      { window.gtag('event', event, props); }
+      if (typeof window.plausible === 'function') { window.plausible(event, { props: props }); }
+      if (window.dataLayer && window.dataLayer.push) {
+        window.dataLayer.push(Object.assign({ event: event }, props));
+      }
+    } catch (e) { /* analytics must never break the page */ }
+  }
+
   var form    = document.getElementById('signup-form');
   var reg     = document.getElementById('view-register');
   var thanks  = document.getElementById('view-thanks');
@@ -770,6 +793,8 @@ html{scroll-behavior:smooth}
     if(!name.value.trim()){ name.focus(); return; }
     if(!email.checkValidity()){ email.reportValidity(); email.focus(); return; }
 
+    track('signup_submit');
+
     var btn = form.querySelector('button[type="submit"]');
     var err = document.getElementById('form-error');
     err.hidden = true;
@@ -791,12 +816,14 @@ html{scroll-behavior:smooth}
         return r.text().then(function(body){
           var ok = r.ok;
           try { ok = ok && JSON.parse(body).success !== false; } catch(err) {}
-          if(!ok) throw new Error('MailerLite rejected the sign-up (' + r.status + ')');
+          if(!ok) { track('signup_failed', { status: r.status }); throw new Error('MailerLite rejected the sign-up (' + r.status + ')'); }
+          track('signup_success');
           return true;
         });
       })
       .then(showThanks)
       .catch(function(){
+        track('signup_error');
         btn.disabled = false;
         btn.textContent = label;
         err.innerHTML = 'We couldn\'t save your details just now. Please try again, or email ' +
@@ -810,6 +837,12 @@ html{scroll-behavior:smooth}
     reg.hidden = false;
     window.scrollTo(0,0);
   });
+
+  // On the day, these tell you how many registrants actually turned up.
+  var zoomLink = document.querySelector('.joincard a[href*="zoom.us"]');
+  if (zoomLink) { zoomLink.addEventListener('click', function(){ track('zoom_join_click'); }); }
+  var calLink = document.querySelector('.joincard a[href*="calendar.app.google"]');
+  if (calLink) { calLink.addEventListener('click', function(){ track('calendar_add_click'); }); }
 
   // In-page CTAs jump to the form and put the cursor in it.
   document.querySelectorAll('a[href="#signup-form"]').forEach(function(a){
