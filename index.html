@@ -745,21 +745,43 @@ html{scroll-behavior:smooth}
   var thanks  = document.getElementById('view-thanks');
   var back    = document.getElementById('back-link');
 
+  // Sign-ups go to the MailerLite form "From Tension to Freedom - Free Masterclass".
+  var MAILERLITE_ACTION = "https://assets.mailerlite.com/jsonp/1497377/forms/200054326493709443/subscribe";
+
+  function showThanks(){
+    reg.hidden = true;
+    thanks.hidden = false;
+    window.scrollTo(0,0);
+    var h = thanks.querySelector('h1');
+    h.setAttribute('tabindex','-1');
+    h.focus();
+  }
+
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var name  = document.getElementById('first-name');
     var email = document.getElementById('email');
     if(!name.value.trim()){ name.focus(); return; }
-    if(!email.checkValidity()){ email.focus(); return; }
+    if(!email.checkValidity()){ email.reportValidity(); email.focus(); return; }
 
-    // NOTE FOR BUILD: post to the email platform here (subscribepage.io / Kajabi / etc.)
-    // and let it handle the redirect. This local hand-off exists so the success
-    // page can be reviewed in place.
-    reg.hidden = true;
-    thanks.hidden = false;
-    window.scrollTo(0,0);
-    thanks.querySelector('h1').setAttribute('tabindex','-1');
-    thanks.querySelector('h1').focus();
+    var btn = form.querySelector('button[type="submit"]');
+    var label = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Reserving\u2026';
+
+    var data = new FormData();
+    data.append('fields[name]', name.value.trim());
+    data.append('fields[email]', email.value.trim());
+    data.append('ml-submit', '1');
+    data.append('anticsrf', 'true');
+
+    fetch(MAILERLITE_ACTION, { method:'POST', body:data, mode:'no-cors' })
+      .then(showThanks)
+      .catch(function(){
+        btn.disabled = false;
+        btn.textContent = label;
+        alert('Something went wrong sending your details. Please check your connection and try again.');
+      });
   });
 
   back.addEventListener('click', function(){
