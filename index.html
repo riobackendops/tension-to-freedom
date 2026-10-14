@@ -259,6 +259,11 @@ p:last-child{margin-bottom:0}
 }
 .panel .field input::placeholder{color:#93A6BC}
 .panel .btn{margin-top:6px;letter-spacing:.1em;text-transform:uppercase;font-size:14px;padding:15px 30px}
+.panel .form-error{
+  margin:0 0 14px;padding:11px 14px;border-radius:3px;
+  background:#8C2B20;color:#fff;font-size:14.5px;line-height:1.45;text-align:left;
+}
+.panel .form-error a{color:#FFD9A8;text-decoration:underline;text-underline-offset:2px}
 .panel .microcopy{
   margin:16px 0 0;font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.45;color:#2C4260;
 }
@@ -487,6 +492,7 @@ html{scroll-behavior:smooth}
           <input id="email" name="email" type="email" autocomplete="email" required>
         </div>
 
+        <p class="form-error" id="form-error" role="alert" hidden></p>
         <button class="btn btn-gold btn-block" type="submit">Reserve My Free Place</button>
         <p class="microcopy">Bring your instrument. You'll try guided exercises as we go.</p>
       </form>
@@ -765,6 +771,8 @@ html{scroll-behavior:smooth}
     if(!email.checkValidity()){ email.reportValidity(); email.focus(); return; }
 
     var btn = form.querySelector('button[type="submit"]');
+    var err = document.getElementById('form-error');
+    err.hidden = true;
     var label = btn.textContent;
     btn.disabled = true;
     btn.textContent = 'Reserving\u2026';
@@ -775,12 +783,25 @@ html{scroll-behavior:smooth}
     data.append('ml-submit', '1');
     data.append('anticsrf', 'true');
 
-    fetch(MAILERLITE_ACTION, { method:'POST', body:data, mode:'no-cors' })
+    // MailerLite sends CORS headers on this endpoint, so read the real answer.
+    // With mode:'no-cors' the response is opaque and a rejected sign-up looks
+    // identical to a successful one - which is how registrations went missing.
+    fetch(MAILERLITE_ACTION, { method:'POST', body:data, mode:'cors' })
+      .then(function(r){
+        return r.text().then(function(body){
+          var ok = r.ok;
+          try { ok = ok && JSON.parse(body).success !== false; } catch(err) {}
+          if(!ok) throw new Error('MailerLite rejected the sign-up (' + r.status + ')');
+          return true;
+        });
+      })
       .then(showThanks)
       .catch(function(){
         btn.disabled = false;
         btn.textContent = label;
-        alert('Something went wrong sending your details. Please check your connection and try again.');
+        err.innerHTML = 'We couldn\'t save your details just now. Please try again, or email ' +
+          '<a href="mailto:chamberencounters@gmail.com">chamberencounters@gmail.com</a> and we\'ll register you by hand.';
+        err.hidden = false;
       });
   });
 
