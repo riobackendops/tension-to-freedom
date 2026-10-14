@@ -167,19 +167,34 @@ p:last-child{margin-bottom:0}
 .hero{position:relative}
 
 .hero-stage{
+  position:relative;
   background:radial-gradient(118% 76% at 50% 24%, #1E4070 0%, #16294A 40%, #101E37 70%, #0C1730 100%);
   padding-block:clamp(26px,3.5vw,46px) clamp(96px,13vw,150px);
   overflow:hidden;
 }
-.hero-col{width:100%;max-width:720px;margin-inline:auto;padding-inline:24px;text-align:center}
-.hero-col .eyebrow{margin-bottom:10px}
 
-.portrait{position:relative;margin-inline:auto;max-width:600px}
-.portrait img{width:100%;height:auto;display:block}
+/* full-bleed performance photo, dissolved into the navy field */
+.hero-photo{
+  position:absolute;top:0;left:0;right:0;
+  height:min(78vw,760px);
+  background:
+    linear-gradient(90deg, rgba(15,29,51,.35) 0%, rgba(15,29,51,0) 30%, rgba(15,29,51,0) 60%, rgba(15,29,51,.7) 100%),
+    linear-gradient(180deg, rgba(15,29,51,.15) 0%, rgba(15,29,51,.35) 60%, rgba(15,29,51,.6) 100%),
+    url("images/1-hero-banner.jpg") 50% 0 / cover no-repeat;
+  -webkit-mask-image:linear-gradient(to bottom, #000 55%, transparent 100%);
+          mask-image:linear-gradient(to bottom, #000 55%, transparent 100%);
+  pointer-events:none;
+}
+
+.hero-col{
+  position:relative;z-index:2;
+  width:100%;max-width:720px;margin-inline:auto;padding-inline:24px;text-align:center;
+  padding-top:min(44vw,420px);
+}
+.hero-col .eyebrow{margin-bottom:12px}
 
 .pill{
-  position:absolute;right:0;bottom:26%;z-index:4;
-  display:inline-flex;align-items:center;gap:8px;
+  display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;
   background:var(--gold);color:#fff;
   font-family:var(--sans);font-size:12px;font-weight:600;
   letter-spacing:.14em;text-transform:uppercase;
@@ -190,7 +205,7 @@ p:last-child{margin-bottom:0}
 
 /* the title rides over the lower third of the figure */
 .poster{
-  margin:clamp(-92px,-8.2vw,-44px) 0 0;
+  margin:0;
   position:relative;z-index:2;
   font-family:var(--display);font-weight:400;color:#fff;
   font-size:clamp(36px,8.8vw,84px);
@@ -413,7 +428,8 @@ mark.tbc{
 
 /* ---------- responsive ---------- */
 @media (max-width:900px){
-  .portrait{max-width:420px}
+  .hero-photo{height:110vw;background-position:0 0, 0 0, 52% 0}
+  .hero-col{padding-top:62vw}
   .split,.split.wide-left{grid-template-columns:1fr;gap:22px}
   .about{grid-template-columns:1fr;gap:26px}
   .about img{max-width:320px;aspect-ratio:1/1}
@@ -442,14 +458,12 @@ html{scroll-behavior:smooth}
 
   <header class="hero">
     <div class="hero-stage">
+      <div class="hero-photo" role="img" aria-label="Dr. Yonatan Grinberg performing the violin with an orchestra"></div>
+
       <div class="hero-col">
         <p class="eyebrow">You're invited</p>
 
-        <div class="portrait">
-          <img src="img/yonatan-cutout.webp" width="1100" height="787"
-               alt="Dr. Yonatan Grinberg playing the violin, bow drawn across the strings.">
-          <span class="pill"><span class="live-dot" aria-hidden="true"></span>Live online</span>
-        </div>
+        <span class="pill"><span class="live-dot" aria-hidden="true"></span>Live online</span>
 
         <h1 class="poster" aria-label="From Tension to Freedom">
           <span class="line"><span class="swash">F</span>ROM TENSION</span>
